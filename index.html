@@ -1,0 +1,98 @@
+<html>
+
+<head>
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body  >
+
+ <h2 class="text-center pt-5 text-dark"> crud system</h2>
+
+    <div class="container py-5 w-75">
+
+        <form>
+
+            <div class="my-3">
+
+                <label for="productName">Product Name</label>
+                <input type="text" class="form-control" id="productName">
+            </div>
+            <div class="my-3">
+
+                <label for="productPrice">Product Price</label>
+                <input type="number" class="form-control" id="productPrice">
+            </div>
+            <div class="my-3">
+
+                <label for="productCategory">Product Category</label>
+                <select class="form-select" id="productCategory">
+
+                    <option value="tv">Tv</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="labtop">Labtop</option>
+                </select>
+
+            </div>
+            <div class="my-3">
+
+                <label for="productDescription">Product Description</label>
+                <textarea class="form-control" id="productDescription"></textarea>
+            </div>
+            <button type="button" id ="add"     onclick="addProduct()"              class="btn btn-outline-info">Add Product</button>
+            <button type="button" id="edit"    onclick="update()" style="display: none;"             class="btn btn-outline-info ">Edit Product</button>
+            <button type="button" onclick="clearform()" class="btn btn-outline-danger">clear Form</button>
+        </form>
+    </div>
+    <div class="container">
+        <input type="text" id="search" onkeyup="search()" class="form-control w-50  mx-auto my-3" placeholder="Search......">
+
+        <table class="table text-center  table-striped table-bordered 
+        ">
+
+            <thead>
+
+                <tr>
+                    <th>Index</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody" class="pt-5">
+                <tr >
+                    <td>0</td>
+                    <td>Nokia</td>
+                    <td>2000</td>
+                    <td>Mobile</td>
+                    <td>Good</td>
+                    <td>
+                        <button class="btn btn-warning">Update</button>
+                    </td>
+                    <td>
+
+
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+             
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
